@@ -1,16 +1,3 @@
-# HugoPagedjs
-Hugo and Pagedjs prototype/experiment/playground
-
-1. Created a new book site "from scratch", following the instructions at https://themes.gohugo.io/hugo-book/
-2. Use Paged.js inside Hugo - the easy way https://gitlab.pagedmedia.org/julientaq/pagedjs-hugo (followed those instructions, also included below) I have annotated these instructions below with some additional details.
-
-
-
-
-
-
------------
-----------
 # Use Paged.js inside Hugo the easy way :)
 
 Paged.js is a library that transforms HTML and CSS into beautiful paginated document, ready to be printed or saved as PDF. If you want to know more about Paged.js, please go to [https://www.pagedjs.org]
@@ -33,7 +20,7 @@ git submodule update --remote themes/pagedjs
 
 If you want to use the component, you need to add two partials: 
 
-- `pagedjs-header.html` in the `<head>` of the template using `{{ partial "pagedjs-header.html" . }}`. (NOTE - added this to the "baseof.html" file in themes/book/layouts/_default -- not sure if this the the best/only way to to this... but so far this is what works... Same is true for the next bullet, for the print-button. )
+- `pagedjs-header.html` in the `<head>` of the template using `{{ partial "pagedjs-header.html" . }}`.
 - `print-button.html` as the first element of the body to fix it top right of the page, using `{{ partial "print-button.html" }}`.
 
 ## Styling your css
@@ -46,3 +33,7 @@ The paged.js module includes a couple of CSS files to work:
 
 If you want to use your own style, you can create a `print.css`, a `pagedjs.css` or a `interface.css` in your Hugo’s project `assets/css/` directory, or, if your making a theme, in the `themes/name-of-the-theme/assets/css/`. Modifying any of the provided CSS files will make it harder to update when new version of paged.js is released.
 
+
+## License
+
+MIT
